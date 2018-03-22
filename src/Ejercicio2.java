@@ -37,4 +37,15 @@ public class Ejercicio2 {
             array[j + 1] = actual;
         }
     }
+
+    public <T extends Comparable> void burbuja(T[] array){
+        T elem;
+        for (int i=0; i<array.length-1; i++)
+            for (int j=0; j<array.length-i-1; j++)
+                if (array[j+1].compareTo(array[j]) == -1){
+                    elem = array[j+1];
+                    array[j+1] = array[j];
+                    array[j] = elem ;
+                }
+    }
 }
